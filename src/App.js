@@ -1,5 +1,3 @@
-import logo from "./logo.svg";
-import "./App.css";
 import MainPage from "./pages/MainPage";
 import AboutMe from "./pages/AboutMe";
 import MyResume from "./pages/MyResume";
