@@ -16,18 +16,13 @@ const AboutmeConteiner = () => {
             <AboutMeTitle>About Me</AboutMeTitle>
             <AboutMeDescription>I am a full Stack developer</AboutMeDescription>
             <AboutMeText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex
-              ligula, pretium non justo at, varius bibendum lorem. Duis varius
-              mauris non diam scelerisque tempor. Etiam hendrerit, tellus nec
-              vulputate sagittis, lorem quam mattis mauris, at tempus est felis
-              ac ipsum. Nulla facilisi. Suspendisse lacinia diam vel neque
-              hendrerit tempor. Mauris est orci, sagittis ac quam vel, luctus
-              finibus magna. Aenean id sodales nulla, eu fringilla mauris. Ut
-              consequat vehicula enim, ornare gravida tellus venenatis id. Donec
-              vulputate velit et neque lacinia tempus. Nullam bibendum blandit
-              sem. Vestibulum vitae pharetra nulla. In ante turpis, feugiat quis
-              leo sit amet, posuere facilisis magna. In hac habitasse platea
-              dictumst.
+              Full stack developer and front-end specialist.
+              <br /> I am 20 years old, brazilian citizen and for now live in
+              Paraná. <br />
+              Started in programming in 2012 with python, html and css. In 2019
+              i started a online and campus-based course where i improve mi
+              skills in html, css, javascript, react, python, clean code, solve
+              problems, creativity, team work and some react components.
             </AboutMeText>
           </DescriptionContainer>
         </InfoContainer>

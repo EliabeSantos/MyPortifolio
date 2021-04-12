@@ -47,10 +47,11 @@ export const AboutMeDescription = styled.h3`
 `;
 
 export const AboutMeText = styled.p`
-  max-width: 500px;
+  max-width: 600px;
   color: white;
+  line-height: 29px;
   padding: 2rem 0 0 0;
-  @media (max-height: 700px) {
-    font-size: 12px;
+  @media (max-width: 680px) {
+    font-size: 14px;
   }
 `;
