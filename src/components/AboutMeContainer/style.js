@@ -14,6 +14,12 @@ export const MainContainer = styled.div`
 export const InfoContainer = styled.div`
   width: 80%;
   height: 80%;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const DescriptionContainer = styled.div`
@@ -21,6 +27,12 @@ export const DescriptionContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 600px) {
+    width: 90%;
+    text-align: left;
+    word-spacing: center;
+  }
 `;
 
 export const AboutMeTitle = styled.h2`

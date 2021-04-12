@@ -1,14 +1,23 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-  width: 40%;
-  height: 22%;
+  width: 49%;
+  height: 7rem;
   border-radius: 40px;
   background-color: #232323;
 
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    margin: 5px 0 5px 0;
+  }
+  @media (max-width: 300px) {
+    height: 6rem;
+  }
 `;
 
 export const IconContainer = styled.div`
@@ -16,7 +25,6 @@ export const IconContainer = styled.div`
   height: 5rem;
   background-color: white;
   border-radius: 100%;
-  margin: 0 1rem 0 1rem;
   font-size: 4rem;
   color: #232323;
 
@@ -24,10 +32,15 @@ export const IconContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 300px) {
+    width: 4rem;
+    height: 4rem;
+  }
 `;
 
 export const ExpBarr = styled.div`
-  width: 60%;
+  width: 40%;
   height: 12px;
   background-color: black;
   padding: 2px;
