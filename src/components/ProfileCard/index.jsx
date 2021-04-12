@@ -22,17 +22,23 @@ const ProfileCard = () => {
         <Description>Full Stack Developer</Description>
         <ContactContainer>
           <Contact>
-            <a href={"https://api.whatsapp.com/send?phone=55+41+996460846"}>
+            <a
+              target="_blank"
+              href={"https://api.whatsapp.com/send?phone=55+41+996460846"}
+            >
               <IoLogoWhatsapp />
             </a>
           </Contact>
           <Contact>
-            <a href={"https://github.com/EliabeSantos"}>
+            <a target="_blank" href={"https://github.com/EliabeSantos"}>
               <AiFillGithub />
             </a>
           </Contact>
           <Contact>
-            <a href={"https://www.linkedin.com/in/eliabe-santos/"}>
+            <a
+              target="_blank"
+              href={"https://www.linkedin.com/in/eliabe-santos/"}
+            >
               <AiFillLinkedin />
             </a>
           </Contact>

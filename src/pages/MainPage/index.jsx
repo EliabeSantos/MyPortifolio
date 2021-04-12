@@ -8,7 +8,6 @@ import { ContentContainer } from "./style";
 const MainPage = () => {
   return (
     <ContentContainer>
-      <Header></Header>
       <MainPageContainer />
       <AboutMe />
       <MyResume />

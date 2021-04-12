@@ -10,6 +10,17 @@ export const ProfileCardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  animation: 1s ease-out 0s 1 slideInFromLeft;
 `;
 
 export const ProfileImageContainer = styled.div`

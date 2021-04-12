@@ -23,10 +23,11 @@ export const InfoContainer = styled.div`
 `;
 
 export const DescriptionContainer = styled.div`
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media (max-width: 600px) {
     width: 90%;
@@ -46,6 +47,7 @@ export const AboutMeDescription = styled.h3`
 `;
 
 export const AboutMeText = styled.p`
+  max-width: 500px;
   color: white;
   padding: 2rem 0 0 0;
 `;

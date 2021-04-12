@@ -10,6 +10,9 @@ export const MainContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 800px) {
+    height: auto;
+  }
 `;
 
 export const ResumeTitle = styled.h1`

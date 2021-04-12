@@ -10,12 +10,23 @@ export const HeaderContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
 
-  position: absolute;
+  position: fixed;
   top: 0;
 
   @media (max-width: 600px) {
     justify-content: center;
   }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  animation: 1s ease-out 0s 1 slideInFromLeft;
 `;
 
 export const Titles = styled.h3`
@@ -37,6 +48,9 @@ export const MenuOptions = styled.h3`
   font-weight: normal;
   margin: 0;
   padding: 0 1rem 0 0;
+  :hover {
+    cursor: pointer;
+  }
   @media (max-width: 600px) {
     display: none;
   }
