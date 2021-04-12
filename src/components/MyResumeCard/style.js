@@ -16,7 +16,8 @@ export const MainContainer = styled.div`
     margin: 5px 0 5px 0;
   }
   @media (max-width: 300px) {
-    height: 6rem;
+    flex-direction: column;
+    height: 10rem;
   }
 `;
 
@@ -32,15 +33,10 @@ export const IconContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
-  @media (max-width: 300px) {
-    width: 4rem;
-    height: 4rem;
-  }
 `;
 
 export const ExpBarr = styled.div`
-  width: 40%;
+  width: 50%;
   height: 12px;
   background-color: black;
   padding: 2px;

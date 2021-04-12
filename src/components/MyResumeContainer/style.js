@@ -29,4 +29,8 @@ export const CardsContainer = styled.div`
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 `;

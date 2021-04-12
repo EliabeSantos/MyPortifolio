@@ -50,4 +50,7 @@ export const AboutMeText = styled.p`
   max-width: 500px;
   color: white;
   padding: 2rem 0 0 0;
+  @media (max-height: 700px) {
+    font-size: 12px;
+  }
 `;
