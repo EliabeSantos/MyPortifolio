@@ -20,7 +20,7 @@ const AboutmeConteiner = () => {
               <br /> I am 20 years old, brazilian citizen and for now live in
               Paraná. <br />
               Started in programming in 2012 with python, html and css. In 2019
-              i started a online and campus-based course where i improve mi
+              i started a online and campus-based course where i improve my
               skills in html, css, javascript, react, python, clean code, solve
               problems, creativity, team work and some react components.
             </AboutMeText>

@@ -27,6 +27,13 @@ const Header = () => {
       }
     });
   };
+  const scroll4 = () => {
+    animateScrollTo(vh * 3).then((hasScrolledToPosition) => {
+      if (hasScrolledToPosition) {
+        // page is scrolled to a desired position
+      }
+    });
+  };
 
   return (
     <>
@@ -35,7 +42,7 @@ const Header = () => {
         <MenuOptions onClick={scroll1}>Home</MenuOptions>
         <MenuOptions onClick={scroll2}>About</MenuOptions>
         <MenuOptions onClick={scroll3}>Resume</MenuOptions>
-        <MenuOptions>Portifolio</MenuOptions>
+        <MenuOptions onClick={scroll4}>Portifolio</MenuOptions>
       </HeaderContainer>
     </>
   );
