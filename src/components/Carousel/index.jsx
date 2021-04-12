@@ -8,7 +8,7 @@ const vw = Math.max(
 
 const teste = () => {
   if (vw <= 600) {
-    return vw / 1.5;
+    return vw - 20;
   }
   return vw / 2;
 };
