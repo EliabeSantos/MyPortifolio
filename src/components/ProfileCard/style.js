@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const ProfileCardContainer = styled.div`
-  width: 30%;
-  height: 60vh;
+  width: 26rem;
+  height: 26rem;
   background-color: #4a4545;
-  margin-top: 12rem;
   border-radius: 10px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `;
 
 export const ProfileImageContainer = styled.div`
@@ -27,6 +27,8 @@ export const ProfilePhoto = styled.img`
   width: 80%;
   height: 80%;
   border-radius: 100%;
+
+  background-color: white;
 `;
 
 export const Titles = styled.h3`
@@ -34,6 +36,12 @@ export const Titles = styled.h3`
   font-weight: normal;
   font-size: 30px;
   margin: 1rem 0 0 0;
+
+  @media (max-width: 300px) {
+    text-align: center;
+    margin: 0;
+    font-size: 25px;
+  }
 `;
 
 export const Description = styled.h3`
@@ -41,6 +49,11 @@ export const Description = styled.h3`
   font-weight: bold;
   font-size: 25px;
   margin: 0.5rem 0 0 0;
+  @media (max-width: 300px) {
+    text-align: center;
+    margin: 0;
+    font-size: 25px;
+  }
 `;
 
 export const ContactContainer = styled.div`
@@ -50,7 +63,7 @@ export const ContactContainer = styled.div`
 
 export const Contact = styled.p`
   color: white;
-  font-size: 40px;
+  font-size: 35px;
   margin: 1rem 1rem 0 1rem;
 
   text-decoration: none;
@@ -58,5 +71,11 @@ export const Contact = styled.p`
   a {
     text-decoration: none;
     color: white;
+  }
+  :hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
   }
 `;
