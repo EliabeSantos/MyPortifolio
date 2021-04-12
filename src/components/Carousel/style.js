@@ -5,8 +5,8 @@ export const ItemContainer = styled.div`
   height: 500px;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 `;
 export const ItemImg = styled.img`
-  width: 350px;
-  height: 350px;
+  width: 100px;
 `;
