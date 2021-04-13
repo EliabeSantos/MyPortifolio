@@ -6,7 +6,7 @@ const PortifolioContainer = () => {
   return (
     <>
       <MainContainer>
-        <Title>My Portifolio</Title>
+        <Title>My Portfolio</Title>
         <Carousel />
       </MainContainer>
     </>

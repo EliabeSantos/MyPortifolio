@@ -42,7 +42,7 @@ const Header = () => {
         <MenuOptions onClick={scroll1}>Home</MenuOptions>
         <MenuOptions onClick={scroll2}>About</MenuOptions>
         <MenuOptions onClick={scroll3}>Resume</MenuOptions>
-        <MenuOptions onClick={scroll4}>Portifolio</MenuOptions>
+        <MenuOptions onClick={scroll4}>Portfolio</MenuOptions>
       </HeaderContainer>
     </>
   );
