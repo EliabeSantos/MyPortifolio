@@ -29,7 +29,7 @@ const MyResumeCard = ({ icon, exp }) => {
         <ExpBarr data-aos="fade-left">
           <InnerExpBarr data-aos="fade-left" exp={exp}></InnerExpBarr>
         </ExpBarr>
-        <ExpText>{exp}</ExpText>
+        <ExpText data-aos="fade-left">{exp}</ExpText>
       </MainContainer>
     </>
   );

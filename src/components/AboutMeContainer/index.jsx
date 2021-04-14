@@ -16,14 +16,24 @@ const AboutmeConteiner = () => {
   return (
     <>
       <MainContainer>
-        <InfoContainer
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-        >
+        <InfoContainer>
           <DescriptionContainer>
-            <AboutMeTitle>About Me</AboutMeTitle>
-            <AboutMeDescription>I am a full Stack developer</AboutMeDescription>
-            <AboutMeText>
+            <AboutMeTitle
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              About Me
+            </AboutMeTitle>
+            <AboutMeDescription
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              I am a full Stack developer
+            </AboutMeDescription>
+            <AboutMeText
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+            >
               Full stack developer and front-end specialist.
               <br /> I am 20 years old, brazilian citizen and for now live in
               Paraná. <br />
