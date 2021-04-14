@@ -7,11 +7,19 @@ import {
   AboutMeText,
 } from "./style";
 
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
+
 const AboutmeConteiner = () => {
   return (
     <>
       <MainContainer>
-        <InfoContainer>
+        <InfoContainer
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+        >
           <DescriptionContainer>
             <AboutMeTitle>About Me</AboutMeTitle>
             <AboutMeDescription>I am a full Stack developer</AboutMeDescription>
