@@ -28,7 +28,6 @@ export const IconContainer = styled.div`
   border-radius: 100%;
   font-size: 4rem;
   color: #232323;
-
   display: flex;
   flex-direction: row;
   align-items: center;

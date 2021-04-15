@@ -17,20 +17,23 @@ const teste = () => {
   return vw / 2;
 };
 
-export default () => (
+const CarouselFunc = () => (
   <Carousel
     autoPlay
     centerMode={true}
     width={teste()}
     infiniteLoop={true}
     showStatus={false}
+    showThumbs={false}
   >
     <ItemContainer>
       <ItemImg alt="" src={Project01} />
       <a
         className="legend"
         target="_blank"
+        rel="noreferrer"
         href="https://easy-wash.vercel.app/"
+        showThumbs={false}
       >
         Easy Wash
       </a>
@@ -39,8 +42,10 @@ export default () => (
       <ItemImg alt="" src={Project02} />
       <a
         target="_blank"
+        rel="noreferrer"
         href="https://kenziehubmaster.vercel.app/"
         className="legend"
+        showThumbs={false}
       >
         Kenzie Hub
       </a>
@@ -49,11 +54,15 @@ export default () => (
       <ItemImg alt="" src={Project03} />
       <a
         target="_blank"
+        rel="noreferrer"
         href="https://lig-4-tau.vercel.app/"
         className="legend"
+        showThumbs={false}
       >
         Lig-4
       </a>
     </ItemContainer>
   </Carousel>
 );
+
+export default CarouselFunc;

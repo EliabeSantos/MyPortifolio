@@ -50,6 +50,10 @@ export const MenuOptions = styled.h3`
   padding: 0 1rem 0 0;
   :hover {
     cursor: pointer;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
   }
   @media (max-width: 600px) {
     display: none;

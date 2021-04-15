@@ -24,19 +24,25 @@ const ProfileCard = () => {
           <Contact>
             <a
               target="_blank"
+              rel="noreferrer"
               href={"https://api.whatsapp.com/send?phone=55+41+996460846"}
             >
               <IoLogoWhatsapp />
             </a>
           </Contact>
           <Contact>
-            <a target="_blank" href={"https://github.com/EliabeSantos"}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={"https://github.com/EliabeSantos"}
+            >
               <AiFillGithub />
             </a>
           </Contact>
           <Contact>
             <a
               target="_blank"
+              rel="noreferrer"
               href={"https://www.linkedin.com/in/eliabe-santos/"}
             >
               <AiFillLinkedin />
