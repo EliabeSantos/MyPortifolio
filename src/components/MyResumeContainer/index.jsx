@@ -7,12 +7,12 @@ const MyResumeContainer = () => {
       <MainContainer>
         <ResumeTitle>My Resume</ResumeTitle>
         <CardsContainer>
-          <MyResumeCard icon={"html"} exp="100%" />
-          <MyResumeCard icon={"css"} exp="90%" />
-          <MyResumeCard icon={"js"} exp="100%" />
-          <MyResumeCard icon={"react"} exp="85%" />
-          <MyResumeCard icon={"python"} exp="40%" />
-          <MyResumeCard icon={"git"} exp="100%" />
+          <MyResumeCard icon={"html"} exp="95%" />
+          <MyResumeCard icon={"css"} exp="80%" />
+          <MyResumeCard icon={"js"} exp="85%" />
+          <MyResumeCard icon={"react"} exp="75%" />
+          <MyResumeCard icon={"python"} exp="60%" />
+          <MyResumeCard icon={"git"} exp="95%" />
         </CardsContainer>
       </MainContainer>
     </>

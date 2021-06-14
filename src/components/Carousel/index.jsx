@@ -4,6 +4,9 @@ import { ItemContainer, ItemImg } from "./style";
 import Project01 from "../../Images/Project_01.svg";
 import Project02 from "../../Images/Project_02.svg";
 import Project03 from "../../Images/Project_03.svg";
+import Project04 from "../../Images/Project_04.svg";
+import Project05 from "../../Images/Project_05.svg";
+
 
 const vw = Math.max(
   document.documentElement.clientWidth || 0,
@@ -60,6 +63,30 @@ const CarouselFunc = () => (
         showThumbs={false}
       >
         Lig-4
+      </a>
+    </ItemContainer>
+    <ItemContainer>
+      <ItemImg alt="" src={Project04} />
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://boletos.personcloud.com.br/"
+        className="legend"
+        showThumbs={false}
+      >
+        Busca Boleto
+      </a>
+    </ItemContainer>
+    <ItemContainer>
+      <ItemImg alt="" src={Project05} />
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://hacker-clicker.vercel.app/"
+        className="legend"
+        showThumbs={false}
+      >
+        Hacker Clicker
       </a>
     </ItemContainer>
   </Carousel>
