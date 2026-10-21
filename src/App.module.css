@@ -1,0 +1,13 @@
+/*
+ * Camada de conteúdo sobre o background 3D.
+ *
+ * `position: relative` + `z-index: 1` cria um stacking context próprio,
+ * garantindo que todo o texto fique acima do canvas (z-index 0).
+ * O header (position: fixed, z-index: 50) continua funcionando normalmente
+ * dentro desta camada.
+ */
+
+.content {
+  position: relative;
+  z-index: 1;
+}

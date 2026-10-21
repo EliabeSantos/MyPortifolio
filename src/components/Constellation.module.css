@@ -1,0 +1,22 @@
+/*
+ * Background 3D fixo atrás de todo o conteúdo.
+ *
+ * - `pointer-events: none` para nunca capturar cliques ou rolagem.
+ * - `aria-hidden` no elemento (definido no TSX) para ignorar leitores.
+ * - `image-rendering` e limites de tamanho evitam custo extra de composição.
+ */
+
+.canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+/*
+ * O conteúdo precisa ficar acima do canvas. O App envolve o site em uma
+ * camada com stacking context; verifique o z-index em App.tsx se alterar.
+ */
