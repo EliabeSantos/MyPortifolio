@@ -87,7 +87,9 @@
 
 .location {
   display: flex;
-  align-items: center;
+  /* Alinha o ícone à PRIMEIRA linha: com `center`, um texto que quebra
+     em duas linhas centraliza o ícone e cria um recuo estranho. */
+  align-items: flex-start;
   gap: var(--space-2);
   margin-top: var(--space-3);
   font-size: var(--text-sm);
@@ -96,6 +98,8 @@
 
 .location svg {
   flex-shrink: 0;
+  /* Ajuste óptico para o centro do glifo da primeira linha. */
+  margin-top: 0.15em;
 }
 
 /* ------------------------------------------------------------------ */
@@ -103,18 +107,49 @@
 /* ------------------------------------------------------------------ */
 
 @media (max-width: 52rem) {
+  .hero {
+    padding-top: calc(var(--header-height) + var(--space-5));
+    padding-bottom: var(--space-8);
+  }
+
   .inner {
     grid-template-columns: 1fr;
+    gap: var(--space-5);
   }
 
   .photoWrap {
-    justify-self: start;
     order: -1;
-    width: min(100%, 15rem);
+    width: 100%;
+    /* Centraliza a foto na tela; o bloco de localização acompanha o
+       alinhamento para não ficar descolado na margem esquerda. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo {
+    /* Foto menor no mobile para o título e os CTAs subirem na tela. */
+    width: min(100%, 9rem);
+  }
+
+  .location {
+    justify-content: center;
+    text-align: center;
+    max-width: 22rem;
   }
 
   .title {
     max-width: none;
+    font-size: clamp(1.75rem, 1.45rem + 1.5vw, 2.5rem);
+  }
+
+  .support {
+    margin-top: var(--space-4);
+  }
+
+  .actions,
+  .socials {
+    margin-top: var(--space-5);
   }
 }
 

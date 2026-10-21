@@ -37,6 +37,17 @@ export function Header() {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
+  // Impede a rolagem do corpo enquanto o menu mobile está aberto,
+  // para o fundo não deslizar por baixo do painel.
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [open]);
+
   // Fecha o menu ao redimensionar para desktop.
   useEffect(() => {
     const media = window.matchMedia("(min-width: 52rem)");
