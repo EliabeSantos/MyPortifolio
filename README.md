@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Portfólio — Eliabe Santos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfólio profissional de **Eliabe Santos**, desenvolvedor de software com experiência
+profissional em Front-End e prática em Full-Stack, APIs e automação de processos.
 
-## Available Scripts
+**Site publicado:** <https://my-portifolio-eliabesantos.vercel.app/>
 
-In the project directory, you can run:
+## Stack
 
-### `yarn start`
+| Camada      | Tecnologia                                              |
+| ----------- | ------------------------------------------------------- |
+| Build       | [Vite 7](https://vitejs.dev)                            |
+| Framework   | React 19 + TypeScript (strict)                          |
+| Estilo      | CSS Modules + design tokens (CSS custom properties)     |
+| Fontes      | Inter e Sora via `@fontsource` (self-hosted, sem CDN)   |
+| Ícones      | SVG inline — nenhuma biblioteca de ícones               |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A base anterior era Create React App 4 + React 17 + styled-components, com carrossel,
+AOS e `animated-scroll-to`. O CRA 4 está em fim de vida e quebra em versões modernas
+do Node; a migração para Vite eliminou ~1200 pacotes de dependência (hoje são 71) e
+removeu o runtime de CSS-in-JS.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Rodar localmente
 
-### `yarn test`
+```bash
+npm install
+npm run dev      # servidor de desenvolvimento em http://localhost:5173
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Build de produção
 
-### `yarn build`
+```bash
+npm run build    # gera o bundle otimizado em dist/
+npm run preview  # serve o build localmente para conferência
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O build passa com TypeScript em modo strict e sem warnings.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Publicar na Vercel
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+O projeto é um Vite puro: a Vercel detecta automaticamente sem `vercel.json`.
 
-### `yarn eject`
+- **Framework preset:** Vite
+- **Build command:** `npm run build`
+- **Output directory:** `dist`
+- **Install command:** `npm install`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Basta conectar o repositório. Deploy contínuo acontece a cada push na branch principal.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Estrutura
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+index.html              SEO, Open Graph, JSON-LD e favicon
+public/                 estáticos: foto, favicon, og-image, robots, sitemap
+src/
+  components/           Header, Hero, About, Projects, ProjectCard, Skills,
+                        Experience, Contact, Footer, Button, Section, Icons
+  data/                 fonte única de conteúdo (profile, projects, skills, experience)
+  hooks/                useReveal (animação de entrada), useActiveSection (nav ativa)
+  styles/               tokens.css (design tokens) + global.css (reset e utilitários)
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Atualizar conteúdo
 
-## Learn More
+Todo o texto do site vive em `src/data/`:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **`profile.ts`** — nome, headline, contatos e links de navegação.
+- **`projects.ts`** — projetos em destaque e secundários, com problema, solução,
+  desafios, tecnologias, contribuição e links de repositório/demonstração.
+- **`skills.ts`** — categorias de habilidades e contextos de uso.
+- **`experience.ts`** — experiência profissional e formação acadêmica.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Ativar o botão de currículo
 
-### Code Splitting
+O botão "Currículo" no hero fica oculto enquanto `profile.resumeUrl` for `null`
+(para não gerar link quebrado). Para ativá-lo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Coloque o PDF em `public/curriculo.pdf`.
+2. Em `src/data/profile.ts`, mude `resumeUrl: null` para `resumeUrl: "/curriculo.pdf"`.
 
-### Analyzing the Bundle Size
+## Acessibilidade
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- HTML semântico com hierarquia de headings (`h1` → `h2` → `h3` → `h4`).
+- Skip link para pular ao conteúdo.
+- Navegação por teclado com foco visível em todos os elementos interativos.
+- Menu mobile com `aria-expanded`, fechamento por `Escape` e foco devolvido ao botão.
+- Contraste verificado sobre fundo escuro; estados ativos comunicados por cor **e**
+  sublinhado/marcador, nunca só por cor.
+- Animações respeitam `prefers-reduced-motion` — com a preferência ativa, todo o
+  conteúdo aparece imediatamente, sem transição.
+- Links externos com `rel="noopener noreferrer"`.
 
-### Making a Progressive Web App
+## Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Conteúdo e código pessoais. Os projetos colaborativos citados (como Easy-Wash)
+possuem autoria de equipe e são indicados como tal.

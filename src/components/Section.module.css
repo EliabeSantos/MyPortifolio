@@ -1,0 +1,35 @@
+.section {
+  padding-block: clamp(var(--space-8), 9vw, var(--space-10));
+  border-top: 1px solid var(--color-border);
+  /* Compensa o scroll-padding do html nas âncoras */
+  scroll-margin-top: var(--header-height);
+}
+
+.compact {
+  padding-block: clamp(var(--space-7), 7vw, var(--space-8));
+}
+
+.heading {
+  max-width: var(--container-narrow);
+  margin-bottom: clamp(var(--space-6), 5vw, var(--space-8));
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-size: var(--text-2xl);
+}
+
+.lead {
+  margin-top: var(--space-4);
+  color: var(--color-text-muted);
+  max-width: 42rem;
+}
